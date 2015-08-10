@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{LSP/langsci}[2014/12/20 Language Science Press]
+\ProvidesClass{LSP/langsci}[2015/06/05 Language Science Press]
 
 % Default values:
 \usepackage{xspace}
@@ -7,6 +7,9 @@
 \newcommand{\lsSeriesNumber}{??}
 \newcommand{\lsISSN}{??}
 \newcommand{\lsISBN}{000-0-000000-00-0}
+\newcommand{\lsISBNdigital}{000-0-000000-00-0}
+\newcommand{\lsISBNhardcover}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcover}{000-0-000000-00-0}
 \newcommand{\lsURL}{http://langsci-press.org/catalog}
 \newcommand{\lsSeries}{eotms}
 \newcommand{\lsSpineBreadth}{20mm}
@@ -15,6 +18,8 @@
 \newcommand{\lsCopyright}{CC-BY}
 \newcommand{\lsBiblatexBackend}{bibtex}
 \newif\iflsDraft \lsDraftfalse
+\newif\iflsOpenReview \lsOpenReviewfalse
+\newif\iflsShowIndex \lsShowIndexfalse
 \newif\iflsIndex \lsIndextrue
 \newif\iflsBiblatex \lsBiblatexfalse
 \newif\iflsCollection \lsCollectionfalse
@@ -61,10 +66,15 @@
 \DeclareVoidOption{smallfont}{  			
 	\renewcommand{\lsFontsize}{10pt}}
 \DeclareVoidOption{draftmode}{	% 'draftmode' instead of 'draft' due to undesirable side efects	
-	 \lsDrafttrue
-	 \overfullrule=5pt	}	% to indicate overfull hboxes
+	\lsDrafttrue
+	\overfullrule=5pt	}	% to indicate overfull hboxes
+\DeclareVoidOption{openreview}{
+	\lsOpenReviewtrue
+	\AtBeginDocument{\renewcommand{\lsISBN}{000-0-000000-00-0}}}
 \DeclareVoidOption{noindex}{  			
 	\lsIndexfalse }
+\DeclareVoidOption{showindex}{  			
+	\lsShowIndextrue }
 \DeclareVoidOption{biblatex}{  			
 	\lsBiblatextrue}
 \DeclareVoidOption{newtxmath}{  			
@@ -129,7 +139,8 @@
 \ifxetex\else\ClassError{LSP/langsci}{Please use XeLaTeX!}{}\fi
 	
 \usepackage{amssymb} % has to be loaded before other stuff
-\usepackage{dtklogos}\newcommand{\xelatex}{\XeLaTeX\xspace}	% the XeLaTeX symbol			
+%\usepackage{dtklogos}\newcommand{\xelatex}{\XeLaTeX\xspace}	% the XeLaTeX symbol, deprecated
+\usepackage{metalogo}\newcommand{\xelatex}{\XeLaTeX\xspace}	% the XeLaTeX symbol		
 \usepackage{fontspec}
 \newcommand{\fontpath}{./LSP/lsp-fonts/}
 
@@ -190,35 +201,9 @@
 
 \setkomafont{sectioning}{\normalcolor\bfseries}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%    Colors:
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{xcolor}
-\definecolor{lsLightBlue}{cmyk}{0.6,0.05,0.05,0}
-\definecolor{lsMidBlue}{cmyk}{0.75,0.15,0,0}
-\definecolor{lsMidDarkBlue}{cmyk}{0.9,0.4,0.05,0}
-\definecolor{lsDarkBlue}{cmyk}{0.9,0.5,0.15,0.3}
-\definecolor{lsNightBlue}{cmyk}{1,0.47,0.22,0.68}
-\definecolor{lsYellow}{cmyk}{0,0.25,1,0}
-\definecolor{lsLightOrange}{cmyk}{0,0.50,1,0}
-\definecolor{lsMidOrange}{cmyk}{0,0.64,1,0}
-\definecolor{lsDarkOrange}{cmyk}{0,0.78,1,0}
-\definecolor{lsRed}{cmyk}{0.05,1,0.8,0}
-\definecolor{lsLightWine}{cmyk}{0.3,1,0.6,0}
-\definecolor{lsMidWine}{cmyk}{0.54,1,0.65,0.1}
-\definecolor{lsDarkWine}{cmyk}{0.58,1,0.70,0.35}
-\definecolor{lsSoftGreen}{cmyk}{0.32,0.02,0.72,0}
-\definecolor{lsLightGreen}{cmyk}{0.4,0,1,0}
-\definecolor{lsMidGreen}{cmyk}{0.55,0,0.9,0.1}
-\definecolor{lsRichGreen}{cmyk}{0.6,0,0.9,0.35}
-\definecolor{lsDarkGreen1}{cmyk}{0.85,0.02,0.95,0.38}
-\definecolor{lsDarkGreen2}{cmyk}{0.85,0.05,1,0.5}
-\definecolor{lsNightGreen}{cmyk}{0.88,0.15,1,0.66}
-\definecolor{lsLightGray}{cmyk}{0,0,0,0.17}
-\definecolor{lsGuidelinesGray}{cmyk}{0,0.04,0,0.45}
+
+
 
 
 
@@ -278,96 +263,12 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%    Series information:
+%    Colors & series information:
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\eotms}{eotms}
-\newcommand{\eotmsig}{eotmsig}
-\newcommand{\sidl}{sidl}
-\newcommand{\algad}{algad}
-\newcommand{\tmnlp}{tmnlp}
-\newcommand{\nc}{nc}		%Niger Congo
-\newcommand{\lnls}{lnls}	%Lecture Notes in Language Sciences
-\newcommand{\silp}{silp}	%Studies in Laboratory Phonology
-\newcommand{\tdgi}{tdgi}	%Topics at the Discourse Grammar Interface
-\newcommand{\cmle}{cmle}	%Computational Models of Language Evolution
-\newcommand{\cfls}{cfls}	%Conceptual Foundation of the Language Sciences
-\newcommand{\lv}{lv}		%Language Variation
-\newcommand{\dummyseries}{dummyseries}
-\newcommand{\guidelines}{guidelines}
-\newcommand{\lsSeriesFontColor}{white}
-
-\AtBeginDocument{
-\ifx\lsSeries\eotms
-	\newcommand{\lsSeriesTitle}{Empirically Oriented Theoretical \newlineCover Morphology and Syntax~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsMidBlue}
-\fi
-\ifx\lsSeries\eotmsig
-	\newcommand{\lsSeriesTitle}{Implemented Grammars~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsMidBlue}
-\fi
-\ifx\lsSeries\sidl
-	\newcommand{\lsSeriesTitle}{Studies in Diversity Linguistics~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsRichGreen}
-	\renewcommand{\lsISSN}{2363-5568}
-\fi
-\ifx\lsSeries\algad
-	\newcommand{\lsSeriesTitle}{African Language Grammars \newlineCover and Dictionaries~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsLightOrange}
-\fi
-\ifx\lsSeries\scl
-	\newcommand{\lsSeriesTitle}{Studies in Caribbean Languages~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsDarkOrange}
-\fi
-\ifx\lsSeries\tmnlp
-	\newcommand{\lsSeriesTitle}{Translation and Multilingual Natural \newlineCover Language Processing~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsDarkBlue}
-\fi
-\ifx\lsSeries\lnls
-	\newcommand{\lsSeriesTitle}{Lecture Notes in Language Sciences~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsYellow}
-\fi	
-\ifx\lsSeries\nc
-	\newcommand{\lsSeriesTitle}{Monographs on Comparative Niger-Congo~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsRed}
-\fi	
-\ifx\lsSeries\silp
-	\newcommand{\lsSeriesTitle}{Studies in Laboratory Phonology~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsLightWine}
-	\renewcommand{\lsISSN}{2363-5576}
-\fi	
-\ifx\lsSeries\tdgi
-	\newcommand{\lsSeriesTitle}{Topics at the Discourse Grammar Interface~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsMidDarkBlue}
-\fi	
-\ifx\lsSeries\cmle
-	\newcommand{\lsSeriesTitle}{Computational Models of Language Evolution~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsNightBlue}
-\fi	
-\ifx\lsSeries\cfls
-	\newcommand{\lsSeriesTitle}{Conceptual Foundations of \newlineCover Language Science~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsNightGreen}
-	\renewcommand{\lsISSN}{2363-877X}
-\fi	
-\ifx\lsSeries\lv
-	\newcommand{\lsSeriesTitle}{Language Variation~\lsSeriesNumber}
-	\newcommand{\lsSeriesColor}{lsDarkWine}
-\fi	
-\ifx\lsSeries\dummyseries
-	\newcommand{\lsSeriesTitle}{~}
-	\newcommand{\lsSeriesColor}{lsNightGreen}
-\fi
-\ifx\lsSeries\guidelines
-	\newcommand{\lsSeriesTitle}{Language Science Press Guidelines}
-	\newcommand{\lsSeriesColor}{lsGuidelinesGray}
-	\renewcommand{\lsCoverFontColor}{black}
-\fi
-
-\iflsBlackandwhite
-	\renewcommand{\lsSeriesColor}{black}
-\fi
-}	
+\usepackage{xcolor}
+\input{LSP/lsp-seriesinfo/series.def} % \lsSeriesColor, \lsSeriesTitle and \lsISSN are defined here
 
 
 
@@ -385,6 +286,9 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 \ofoot[]{\pagemark}
 \iflsDraft
   \ifoot{Draft of \today, \currenttime}
+\fi
+\iflsOpenReview
+  \ifoot{{\color{lsRed}Open review version}. Final version at \url{\lsURL}.}
 \fi
 %% \ihead{\upshape{\headmark}}
 %% \ohead{\pagemark}
@@ -468,7 +372,7 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{floatrow}					% For adjusting the position of the caption (default is below).
+\usepackage{floatrow}			% For adjusting the position of the caption (default is below).
 \floatsetup[table]{capposition=top} 	% As for tables, the caption appears above.
 
 % This sets the default for the positioning of floats
@@ -598,6 +502,7 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 % \fi
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Hyperref:
@@ -664,6 +569,23 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 			\scalebox{10}{DRAFT}\\
 			of \today, \currenttime
 			\end{tabular}}
+	   \end{textblock}
+	\fi
+	\iflsOpenReview
+		\iflsDraft
+			\ClassError{LSP/langsci}{Open review mode not compatible with draft mode. Please disable one of them}{}	
+		\fi
+		\begin{textblock}{170}(-20,75)
+			\rotatebox{30}{
+			\colorbox{red}{
+			\parbox[c][15ex][c]{220mm}{\centering\lsCoverTitleFont\color{white}Open Review\\[-0.1ex]}
+			% \begin{tabular}{c}
+			% 	~\\
+			% 	\scalebox{6}{\color{red}Open Review}\\[-0.5ex]
+			% 	~%version of \today, \currenttime
+			% \end{tabular}
+			}
+			}
 	   \end{textblock}
 	\fi}
 
@@ -792,7 +714,7 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 \newcommand{\lsCollectionPaperCitation}{\scalebox{1.2}{
 	\includegraphics{\logopath/langsci_spinelogo_nocolor.pdf}}%
 	\hspace{0.8em}%
-	\parbox[b]{.85\textwidth}{\linespread{0.8}\small\normalfont\lsCollectionPaperCitationText}}
+	\parbox[b]{.85\textwidth}{\linespread{0.8}\small\normalfont\lsCollectionPaperCitationText.}}
 \newcommand{\lsCollectionPaperCitationText}{\string\lsCollectionPaperCitationText.}
 \newcommand{\lsPaper}{
 	\renewcommand{\maketitle}{
@@ -837,9 +759,13 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 \newcommand{\lsOutputLong}{long}
 \newcommand{\lsOutputShort}{short}
 \newcommand{\lsOutputInprep}{inprep}
+\newcommand{\lsOutputWeb}{web}
+\newcommand{\lsOutputSoftcover}{softcover}
+\newcommand{\lsOutputHardcover}{hardcover}
 \newcommand{\lsOutputPaper}{paper}
 \newcommand{\lsOutputGuidelines}{guidelines}
 
+\hypersetup{colorlinks=false, pdfborder={0 0 0}} 	% for hyperref
 
 \AtBeginDocument{
 \ifx\lsOutput\lsOutputPaper				% only if output=paper
@@ -848,105 +774,104 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 	\counterwithout{table}{chapter}
 	\lsPaper
 \else									% only if output!=paper
-\renewcommand{\maketitle}{
-\begin{titlepage}
-\thispagestyle{empty}
-
-\ifx\lsOutput\lsOutputLong				% only if output=long
-	\setcounter{page}{-3}
-	% First titlepage:
-	{\lsFrontPage}
-	%%%%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	\null\newpage\thispagestyle{empty}
-	% Back page:
-	{\lsBackPage}
-	%%%%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	\null\newpage\thispagestyle{empty}
-	% Book spine:
-	{\lsSpine}
-	%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	\null\newpage\thispagestyle{empty}
-	% Series information:
-	{\lsSeriesHistory}
-	%%%%%%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	% Schmutztitel:
-	{\renewcommand{\lsCoverBlockColor}{white}
-	 \renewcommand{\lsCoverFontColor}{\lsSeriesColor}
-	\lsSchmutztitel}
-	%%%%%%%%%%%%%%%%%%%%
-\fi		
-
-\ifx\lsOutput\lsOutputShort						% only if output=short
-	\setcounter{page}{-1}
-	% First titlepage:
-	{\lsFrontPage}
-	%%%%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	\null\newpage\thispagestyle{empty}
-	% Series information:
-	{\lsSeriesHistory}
-	%%%%%%%%%%%%%%%%%%%%%
-	\newpage\thispagestyle{empty}
-	% Schmutztitel:
-	{\renewcommand{\lsCoverBlockColor}{white}
-	 \renewcommand{\lsCoverFontColor}{\lsSeriesColor}
-	\lsSchmutztitel}
-	%%%%%%%%%%%%%%%%%%%%
-	\AtEndDocument{
-		\null\newpage\thispagestyle{empty}
-		% Back page:
-		{\lsBackPage}
-		\null\newpage\thispagestyle{empty}
-	}
-\fi
-
-\ifx\lsOutput\lsOutputInprep					% only if output=inprep
-	{\renewcommand{\lsCoverBlockColor}{white}
-	 \renewcommand{\lsCoverFontColor}{black}
-	 \lsCoverBlock
-	 \lsCoverTitleAuthor}
-\fi								
-
-\ifx\lsOutput\lsOutputGuidelines				% only if output=guidelines
-	{\setcounter{page}{-1}
-	% First titlepage:
-	{\lsFrontPage}}
-\fi	
-
-\end{titlepage}
-
-\frontmatter
-\renewcommand{\frontmatter}{}
-
-\null\newpage\thispagestyle{empty}
-\hypersetup{colorlinks=false, pdfborder={0 0 0}} 	% for hyperref
-\color{black}
-\lsInsideFont
-
-% Imprint:
-\ifx\lsOutput\lsOutputInprep{}
-\else{
-	\ifx\lsOutput\lsOutputGuidelines{}
-	\else{\lsImpressum}
-	\fi}
-\fi
-%%%%%%%%%%%%%
-
-\null\newpage\thispagestyle{plain}
-%\pagenumbering{roman}		% or \frontmatter
-
-% Dedication:
-\ifx\@dedication\empty{}
-\else{\lsDedication}
-\fi
-%%%%%%%%%%%%%%%%
-
-}	% \maketitle
-\fi
+% \renewcommand{\maketitle}{
+% \begin{titlepage}
+% \thispagestyle{empty}
+% 
+% \ifx\lsOutput\lsOutputLong				% only if output=long
+% 	\setcounter{page}{-3}
+% 	% First titlepage:
+% 	{\lsFrontPage}
+% 	%%%%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	\null\newpage\thispagestyle{empty}
+% 	% Back page:
+% 	{\lsBackPage}
+% 	%%%%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	\null\newpage\thispagestyle{empty}
+% 	% Book spine:
+% 	{\lsSpine}
+% 	%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	\null\newpage\thispagestyle{empty}
+% 	% Series information:
+% 	{\lsSeriesHistory}
+% 	%%%%%%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	% Schmutztitel:
+% 	{\renewcommand{\lsCoverBlockColor}{white}
+% 	 \renewcommand{\lsCoverFontColor}{\lsSeriesColor}
+% 	\lsSchmutztitel}
+% 	%%%%%%%%%%%%%%%%%%%%
+% \fi		
+% 
+% \ifx\lsOutput\lsOutputShort						% only if output=short
+% 	\setcounter{page}{-1}
+% 	% First titlepage:
+% 	{\lsFrontPage}
+% 	%%%%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	\null\newpage\thispagestyle{empty}
+% 	% Series information:
+% 	{\lsSeriesHistory}
+% 	%%%%%%%%%%%%%%%%%%%%%
+% 	\newpage\thispagestyle{empty}
+% 	% Schmutztitel:
+% 	{\renewcommand{\lsCoverBlockColor}{white}
+% 	 \renewcommand{\lsCoverFontColor}{\lsSeriesColor}
+% 	\lsSchmutztitel}
+% 	%%%%%%%%%%%%%%%%%%%%
+% 	\AtEndDocument{
+% 		\null\newpage\thispagestyle{empty}
+% 		% Back page:
+% 		{\lsBackPage}
+% 		\null\newpage\thispagestyle{empty}
+% 	}
+% \fi
+% 
+% \ifx\lsOutput\lsOutputInprep					% only if output=inprep
+% 	{\renewcommand{\lsCoverBlockColor}{white}
+% 	 \renewcommand{\lsCoverFontColor}{black}
+% 	 \lsCoverBlock
+% 	 \lsCoverTitleAuthor}
+% \fi								
+% 
+% \ifx\lsOutput\lsOutputGuidelines				% only if output=guidelines
+% 	{\setcounter{page}{-1}
+% 	% First titlepage:
+% 	{\lsFrontPage}}
+% \fi	
+% 
+% \end{titlepage}
+% 
+% \frontmatter
+% \renewcommand{\frontmatter}{}
+% 
+% \null\newpage\thispagestyle{empty}
+% \color{black}
+% \lsInsideFont
+% 
+% % Imprint:
+% \ifx\lsOutput\lsOutputInprep{}
+% \else{
+% 	\ifx\lsOutput\lsOutputGuidelines{}
+% 	\else{\lsImpressum}
+% 	\fi}
+% \fi
+% %%%%%%%%%%%%%
+% 
+% \null\newpage\thispagestyle{plain}
+% %\pagenumbering{roman}		% or \frontmatter
+% 
+% % Dedication:
+% \ifx\@dedication\empty{}
+% \else{\lsDedication}
+% \fi
+% %%%%%%%%%%%%%%%%
+% 
+% }	% \maketitle
+% \fi
 
 % for those who like the example in numbered example sentences to be typeset in italics
 % this is possible for a complete series only.
@@ -1102,7 +1027,9 @@ guarantee the accuracy of such information thereafter.
 \fi
 
 \raggedbottom
-\deffootnote[1.5em]{1.5em}{0mm}{\textsuperscript{\thefootnotemark}\ }
+\deffootnote[1.5em]{1.5em}{\normalparindent}{\textsuperscript{\thefootnotemark}\ }
+\newlength{\normalparindent}
+\AtBeginDocument{\setlength{\normalparindent}{\parindent}}
 
 \KOMAoptions{footnotes=multiple}
 
@@ -1321,5 +1248,41 @@ guarantee the accuracy of such information thereafter.
 \setlength{\afterepigraphskip}{0\baselineskip}
 
 \usepackage{./LSP/lsp-styles/lsp-makros}
+
+
+% floats
+% http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html
+% Alter some LaTeX defaults for better treatment of figures:
+
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+	% remember to use [htp] or [htpb] for placement
+
+\iflsShowIndex	% shows index commands in text
+	\usepackage{soul}
+	\usepackage[textwidth=2cm
+		]{todonotes}
+	\usepackage[noadjust]{marginnote}
+	\renewcommand{\marginpar}{\marginnote}
+	\let\isold\is 
+	\renewcommand{\isi}[1]{\sethlcolor{green}\hl{#1}\isold{#1}}
+	\renewcommand{\is}[1]{\todo[color=green,size=\scriptsize]{\tiny#1}\isold{#1}}
+\fi
+
 
 \endinput
