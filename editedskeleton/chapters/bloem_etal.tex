@@ -76,17 +76,17 @@ These measures are comparable to \citet[p.43]{labov_atlas_2006}'s isogloss measu
 A very representative feature shows little variation among the English accents of native speakers of one language, and a very distinctive feature shows a large difference between those speakers and native speakers of English. More formally, we assume a native language $l$, consisting of $|l|$ speaker samples, among a larger group of languages $G$ consisting of $|G|$ speaker samples. $G$ includes the speakers $s$ that speak $l$ as well as the $s$ speaking other languages. In this work, we limit $G$ to only include native speakers of the language of interest $l$ and of English, since we would like to see what features are characteristic compared to native English. However, including more languages in $G$ is possible too.
 
 We also assume a measure of between-speaker difference $d$, with respect to a given feature $f$. For representativeness, we then calculate a mean difference $\bar{d}$ with respect to $f$ within the language under investigation:
-\begin{equation*}
+\begin{equation}
 \bar{d^l_f} = \frac{2}{|l|^2 - |l|} \sum_{s,s' \in l} d_f(s,s')
-\end{equation*}
+\end{equation}
 To quantify distinctiveness, we calculate a mean difference $\bar{d}$ with respect to $f$ from the speech of native English speakers:
-\begin{equation*}
+\begin{equation}
 \bar{d^{\neg l}_f} = \frac{1}{|l|(|G| - |l|)} \sum_{s \in l,s' \notin l} d_f(s,s')
-\end{equation*}
+\end{equation}
 Characteristic features are considered to be those where the difference between $\bar{d^{\neg l}_f}$ and $\bar{d^l_f}$ is relatively large. Following \citet{prokic_detecting_2012}, we normalize these measures by calculating the difference between their z-scores rather than just the raw difference:
-\begin{equation*}
+\begin{equation}
 \frac{\bar{d^{\neg l}_f} - \bar{d_f}}{sd(d_f)} - \frac{\bar{d^{l}_f} - \bar{d_f}}{sd(d_f)}
-\end{equation*}
+\end{equation}
 This normalizes the difference scores for each feature separately.
 
 This measure is implemented in the publicly available Gabmap web application for dialectology \citep{nerbonne_gabmap_2011}, and this is the implementation we used to conduct this research. In this application, languages $l$ are represented as clusters of $|l|$ speaker samples. We manually defined these clusters using the native language metadata from the Speech Accent Archive, not applying any of the automatic clustering techniques available in Gabmap to avoid errors.
