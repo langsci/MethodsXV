@@ -1,0 +1,53 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{chapters/03}{incollection}{skipbib}
+  \name{author}{1}{}{%
+    {{}%
+     {chapters/03.tex}{c.}%
+     {Change}{C.}%
+     {author~in}{a.~i.}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {localmetadata.sty}{l.}%
+     {Change}{C.}%
+     {author~in}{a.~i.}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Language Science Press}%
+  }
+  \strng{namehash}{cCai1}
+  \strng{fullhash}{cCai1}
+  \field{labelyear}{2014}
+  \field{sortinit}{C}
+  \field{booktitle}{Change your booktitle in localmetadata.sty}
+  \field{pages}{5\bibrangedash 6}
+  \field{title}{Change title in chapters/03.tex}
+  \list{location}{1}{%
+    {Berlin}%
+  }
+  \field{year}{2014}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
