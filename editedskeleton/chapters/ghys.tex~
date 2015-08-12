@@ -16,6 +16,7 @@
 \newcommand{\ghysvarc}{\textsuperscript{[-st,-ypr]~~}}
 \newcommand{\ghysvard}{\textsuperscript{[+st,-ypr]~~}}
 %%% We could even add colour back in, as long as the symbols/variables are ALSO clear without colour
+%%%%SN: correct
 
 \newcommand{\tabitem}{{\textbullet}~~}
  
@@ -411,7 +412,7 @@ A study of the plotted variants shows a horizontal continuum, stretching from [+
 It is up for debate to what degree clusters (c) and (d) should be seen as separate clusters, as the cluster analysis shows they are very close to each other. I have chosen to analyse them separately, as cluster (c) contains several features which according to \citet{taeldeman_zich_2008} are part of the homogeneising \textit{tussentaal} in Flanders, making it interesting to analyse them separately. 
 
 \begin{figure}
-\includegraphics[width=\textwidth]{illustrations/ghys_fig2.jpg}
+\includegraphics[width=\textwidth]{illustrations/ghys_fig2.png}
 \caption{Correspondence biplot with speech setting, age and speaker as main effects. Dark red: [-st, +ypr]-variants; 
 Light red: [+st, +ypr]-variant;
 Light blue: [-st, -ypr]-variants;

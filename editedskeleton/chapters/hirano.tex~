@@ -145,4 +145,5 @@ Another useful concept which might help to explain the linguistic behaviour of t
 \section*{Acknowledgement}
 This work was supported by JSPS KAKENHI Grant Number 25284082.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -1,8 +1,8 @@
 \documentclass[output=paper]{LSP/langsci}  
-\author{Marie-Hélène Côté, Remco Knooihuizen, John Nerbonne} 
+\author{Marie-Hélène Côté\affiliation{Université Laval}\and  Remco Knooihuizen\affiliation{University of Groningen}     \lastand John Nerbonne\affiliation{University of Groningen, University of Freiburg}} 
 \title{Embracing the future of dialects} 
 % \epigram{Change epigram in chapters/01.tex or remove it there }
-% \abstract{Change the  abstract in chapters/01.tex \lipsum[1]}
+ \abstract{The conference Methods in Dialectology XV was held in Groningen on 11–15 August 2014. In October 2014 we issued a call for a contribution to a volume of proceedings, which led to a gratifying number of excellent reactions. This brief introduction tells a bit more about the conference and provides some orientation to the papers in the volume.}
 \maketitle 
 \begin{document}
 
@@ -10,9 +10,9 @@
 % 
 % \textbf{Marie-Hélène Côté}\textbf{\textsuperscript{1}}\textbf{, Remco Knooihuizen}\textbf{\textsuperscript{2}}\textbf{, John Nerbonne}\textbf{\textsuperscript{2,3}}
 
-\textbf{\textsuperscript{1}}\textbf{Université Laval, }\textbf{\textsuperscript{2}}\textbf{University of Groningen, }\textbf{\textsuperscript{3}}\textbf{University of Freiburg}
+% \textbf{\textsuperscript{1}}\textbf{Université Laval, }\textbf{\textsuperscript{2}}\textbf{University of Groningen, }\textbf{\textsuperscript{3}}\textbf{University of Freiburg}
 
-\textit{The conference Methods in Dialectology XV was held in Groningen on 11–15 August 2014. In October 2014 we issued a call for a contribution to a volume of proceedings, which led to a gratifying number of excellent reactions. This brief introduction tells a bit more about the conference and provides some orientation to the papers in the volume.  }
+\textit{  }
 
 \section{The conference}
 The conference was the fifteenth in the series \textit{Methods in Dialectology}, which started in 1972, and which has “generally alternated between Europe and Canada”.\footnote{Methods and Methods 14, \url{http://westernlinguistics.ca/methods14/methods_14.html}, consulted 20 April 2015.} Following its predecessors, Methods XV issued a broad call for contributions to the conference, emphasizing that areal, social and historical perspectives have all been regarded as tributaries to the discipline of variationist linguistics at least since Chambers and Trudgill’s programmatic work (\citealt{chambers_dialectology_1980}, \citealt{chambers_dialectology_1998}: Chapter 12).

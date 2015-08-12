@@ -1,5 +1,5 @@
 \documentclass[output=paper]{LSP/langsci}  
-\author{Christoph Wolk and Benedikt Szmrecsanyi}
+\author{Christoph Wolk\affiliation{?} \and Benedikt Szmrecsanyi\affiliation{?}}
 \title{Top-down and bottom-up advances in corpus-based dialectometry}
 \abstract{We present three approaches to corpus-based dialectometry and apply them to morphosyntactic variation in the \emph{Freiburg Corpus of English Dialects}, which covers 34 counties throughout Great Britain.
 Two of these are \emph{top-down approaches} that start with a predefined feature list; one using a straightforward frequency-based analysis, the other enhancing the raw numbers using probabilistic modeling.
@@ -303,9 +303,11 @@ As for the future of dialects \textit{per se}, we would like to stress that a fo
 
 We wish to thank Peter Kleiweg for creating and maintaining the RuG/L04 package. The audience at the Workshop on 'Frontiers in the study of language variety' at the Methods XV conference in Groningen (August 2014) provided very helpful and valuable feedback on an earlier version of this paper. We also thank three anonymous reviewers for their extensive and constructive feedback. The second-named author gratefully acknowledges an Odysseus grant awarded by the Research Foundation Flanders (FWO, grant no. G.0C59.13N). The usual disclaimers apply.
 
-\bibliography{master}
 
 %\printbibliography[heading=subbibliography,notkeyword=this]
 % The following inserted by BS
 %\bibliography{diam}
 \il{British English|)}
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

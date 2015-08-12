@@ -212,4 +212,5 @@ A last point concerns the question of the degree of details in phonetic transcri
 
 Here, more modern approaches and methods of investigation seem to provide help. For the project {\textquotedbl}Effects of the national border on the linguistic situation in the Upper Rhine Area{\textquotedbl} (Frontière linguistique au Rhin Supérieur, FLARS) for example, there were no transcripts made in the actual investigation situation, but the researchers only transcribed relevant parts later with the help of the audio data (cf. \citealt{auer_auswirkungen_2015}).\footnote{cf. also the note on Hammarström{\textquotesingle}s method of \textit{transcription phonétique indirecte} ({\textquotesingle}subsequent transcription of audio material under laboratory conditions{\textquotesingle}) in \citet[73]{hotzenkocherle_einfuhrung_1962}.} This leads to a closer relation between audio data and analysis; the process of (phonetic) transcribing is carried out by one person\footnote{\ This method, of course, does not solve the problem of {\textquotedbl}within-transcriber variability{\textquotedbl} \citep[258]{kerswill_limits_1990}.} in a relatively short time, and the focus is on the aspect that will be the object of analysis.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

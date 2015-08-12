@@ -384,4 +384,5 @@ Furthermore, this new method allows us to divide the results obtained into 3 mai
 \section*{Acknowledgement}
 We would like to thank Professor Gary German (UBO Brest) for his precious help in rereading and revising this paper.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -219,7 +219,7 @@ In this section, the linguistic similarities among the localities based on the L
 \includegraphics[width=0.3\textwidth]{illustrations/kuma_fig21-F75}
 \\
 \includegraphics[width=0.3\textwidth]{illustrations/kuma_fig21-F87}
-\includegraphics[width=0.5\textwidth]{illustrations/kuma_fig21-Points_a_}
+\includegraphics[width=0.5\textwidth]{illustrations/kuma_fig21-Points}
 \caption{Similarity maps along the Nakasendo route: Selected maps (frames of the animation). The number following F is a frame number. F01: Tokyo, F87: Kyoto. Bottom right: Selected points by buffer superimposed on topographical map.}          
 \label{fig:21}
 \end{figure}
@@ -272,4 +272,5 @@ We have been developing the LAJDB to preserve the original survey materials and 
 \section*{Acknowledgements}
 The Linguistic Atlas of Japan Database (LAJDB) was supported by a Grant-in-Aid for Publication of Scientific Research Results (database) in 2001, 2002, 2003, 2004, 2005, and 2008 (Project Leader: Yasuo Kumagai). This paper includes some outcomes of the collaborative research projects “Analyzing large-scale dialectal survey data from multiple perspectives” (2009–2012, Project Leader: Yasuo Kumagai), “General Research for the Study and Conservation of Endangered Dialects in Japan” (2013–, Project Leader: Nobuko Kibe) at the National Institute for Japanese Language and Linguistics, and “Development of quantitative methods of analyzing large-scale dialectal distribution data” (Grants-in-aid for scientific research (c), JSPS KAKENHI Grant Number 26370555, 2014–, Project Leader: Yasuo Kumagai). I thank to the blind reviewers and the editors for their valuable comments and suggestions.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -131,4 +131,5 @@ The reason for this stability can be related to the function of language as a me
 
 The examples suggest that the hypothesis is verified. Future work on additional examples aims to further test the hypothesis.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

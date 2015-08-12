@@ -222,4 +222,5 @@ dynamic post-bilabial continuum (coef=0.1278, \textit{p} {\textless} 0.05) and c
 \section*{Acknowledgements}
 This research has been supported by grants \# BCS-0518264 \& BCS-1123460 (PI Fridland), and BCS-1122950 (PI Kendall) from the National Science Foundation. We thank Craig Fickle and Charlie Farrington at the University of Oregon, and Sohei Okamoto and Kaylynn Gunter at the University of Nevada, Reno, for support with various aspects of this research. We also thank our audience at Methods in Dialectology XV, the editors, and the three anonymous reviewers for their helpful advice about our project.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -18,7 +18,7 @@
 
 %\addbibresource{futureofdialects}
 \documentclass[output=paper]{LSP/langsci}  
-\author{Jelke Bloem, Martijn Wieling, John Nerbonne} 
+\author{Jelke Bloem\affiliation{Amsterdam Center for Language and Communication, University of Amsterdam} \and Martijn Wieling\affiliation{Center for Language and Cognition, University of Groningen,Department of Quantitative Linguistics, University of T\"{u}bingen } \lastand John Nerbonne\affiliation{Center for Language and Cognition, University of Groningen, Freiburg Institute for Advanced Studies, University of Freiburg }} 
 \title{Automatically identifying characteristic features of non-native English accents} 
 % \epigram{Change epigram in chapters/01.tex or remove it there }
 \abstract{In this work, we demonstrate the application of statistical measures from dialectometry to the study of accented English speech. This new methodology enables a more quantitative approach to the study of accents. Studies on spoken dialect data have shown that a combination of representativeness (the difference between pronunciations within the language variety is small) and distinctiveness (the difference between pronunciations inside and outside the variety is large) is a good way to identify characteristic features of a language variety. We applied this method from dialectology to transcriptions of the words from the Speech Accent Archive, while treating L2 English speakers with different L1s as `varieties'. This yields lists of words that are pronounced characteristically differently in comparison to native accents of English. We discuss English accent characteristics for French, Hungarian and Dutch. We compare the French and Hungarian results to phonological descriptions of those languages to identify the source of the difference. The Dutch results are compared to a Dutch accents judgement study \citep{van_den_doel_evaluation_2006} to evaluate the measure. Knowing about these characteristic features of accents has useful applications in teaching L2 learners of English, since potentially difficult sounds or sound combinations can be identified and addressed based on the learner's native language.
@@ -76,17 +76,17 @@ These measures are comparable to \citet[p.43]{labov_atlas_2006}'s isogloss measu
 A very representative feature shows little variation among the English accents of native speakers of one language, and a very distinctive feature shows a large difference between those speakers and native speakers of English. More formally, we assume a native language $l$, consisting of $|l|$ speaker samples, among a larger group of languages $G$ consisting of $|G|$ speaker samples. $G$ includes the speakers $s$ that speak $l$ as well as the $s$ speaking other languages. In this work, we limit $G$ to only include native speakers of the language of interest $l$ and of English, since we would like to see what features are characteristic compared to native English. However, including more languages in $G$ is possible too.
 
 We also assume a measure of between-speaker difference $d$, with respect to a given feature $f$. For representativeness, we then calculate a mean difference $\bar{d}$ with respect to $f$ within the language under investigation:
-\begin{equation*}
+\begin{equation}
 \bar{d^l_f} = \frac{2}{|l|^2 - |l|} \sum_{s,s' \in l} d_f(s,s')
-\end{equation*}
+\end{equation}
 To quantify distinctiveness, we calculate a mean difference $\bar{d}$ with respect to $f$ from the speech of native English speakers:
-\begin{equation*}
+\begin{equation}
 \bar{d^{\neg l}_f} = \frac{1}{|l|(|G| - |l|)} \sum_{s \in l,s' \notin l} d_f(s,s')
-\end{equation*}
+\end{equation}
 Characteristic features are considered to be those where the difference between $\bar{d^{\neg l}_f}$ and $\bar{d^l_f}$ is relatively large. Following \citet{prokic_detecting_2012}, we normalize these measures by calculating the difference between their z-scores rather than just the raw difference:
-\begin{equation*}
+\begin{equation}
 \frac{\bar{d^{\neg l}_f} - \bar{d_f}}{sd(d_f)} - \frac{\bar{d^{l}_f} - \bar{d_f}}{sd(d_f)}
-\end{equation*}
+\end{equation}
 This normalizes the difference scores for each feature separately.
 
 This measure is implemented in the publicly available Gabmap web application for dialectology \citep{nerbonne_gabmap_2011}, and this is the implementation we used to conduct this research. In this application, languages $l$ are represented as clusters of $|l|$ speaker samples. We manually defined these clusters using the native language metadata from the Speech Accent Archive, not applying any of the automatic clustering techniques available in Gabmap to avoid errors.
@@ -308,8 +308,6 @@ One limitation of the method is that we still require a manual step to find phon
 
 We would like to thank Anna M\'{e}sz\'{a}ros for suggestions regarding the Hungarian data, and the anonymous reviewers for their helpful comments.
 
-%\bibliographystyle{apacite}
-%\printbibliography[heading=subbibliography,notkeyword=this]
-\bibliography{master}
 
-%\end{document}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

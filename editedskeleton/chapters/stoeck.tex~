@@ -1,5 +1,5 @@
 \documentclass[output=paper]{LSP/langsci}  
-\author{P. Stoeckle} 
+\author{P. Stoeckle\affiliation{}} 
 \title{Horizontal and vertical variation in Swiss German morphosyntax}
 \abstract{This paper deals with the question of how areas with different syntactic variability can be identified. It uses data from the ‘Syntactic Atlas of German-speaking Switzerland‘ (SADS) which uses multiple informants in each survey location. As a starting point the well-known doubling construction with the verb \emph{aafange} ‘begin’ is used to illustrate how the different regions differ with respect to inter-personal variation and how the different variants can be mapped in terms of predominance, i.e. to what extent they co-occur or compete with the other variants. As a quantitative measure, the intensity value of the dominant variant (i.e. the agreement rate between those informants providing the dominant variant as their variant) is used as the basis to create a so-called “variation index”. This technique is applied to a larger set of SADS data, and the results are mapped onto the survey points indicating the syntactic variability for each location. To assess the validity of the method, several subgroups are created which turn out to correlate with the whole data set at a significant level. By performing a hot spot analysis, regional clusters of high/low syntactic variability can be identified. 
 }
@@ -101,9 +101,9 @@ As the observations in the previous section have shown, the percentage of agreem
 
 In order to classify the research area according to the inter-speaker syntactic variation at the individual survey locations, it will be necessary to quantify the agreement rates including multiple phenomena. At the present time not all questions which were part of the SADS survey have been edited completely, so that their inclusion in the analyses might have been problematic. Therefore a subset of 57 questions from the SADS comprising 26 different syntactic phenomena was chosen as data for the analyses. As a simple mathematical measure of quantification the arithmetic mean of all agreement rates for each location was calculated. We will call it \emph{agreement index}, and it is defined as follows:\footnote{I am aware that the arithmetic mean is a very simple statistic measure which does not necessarily have to be quoted as mathematical formula. Nevertheless, it shall be presented here so that it is easier in the remainder of the article to refer to its elements. }
 
-\begin{equation*}
+\begin{equation}
 \mathit{AI}=\frac{1}{n}\sum _{i=1}^{n}{{\mathit{IDV}}_{i}}
-\end{equation*}
+\end{equation}
 
 where
 
@@ -115,9 +115,9 @@ where
 \item \emph{n} is the total number of SADS questions taken into account.
 
 \item Since our main focus is on variation rather than agreement and we would, therefore, like to obtain higher values for more variation and smaller values for less variation (and all values range between 0 and 1), we define our \emph{variation index} as\\
-\begin{equation*}
+\begin{equation}
 \mathit{VI}=1-\mathit{AI}
-\end{equation*}
+\end{equation}
 \end{itemize}
 
 For a first impression of the geographic distribution, the variation indices are mapped to the SADS survey points, the result of which is displayed in \figref{fig:5}.
@@ -140,7 +140,9 @@ Let us first address question number two. In geography, questions of this type a
 \begin{quote}[It] works by looking at each feature within the context of neighboring features. A feature with a high value is interesting but may not be a statistically significant hot spot. To be a statistically significant hot spot, a feature will have a high value and be surrounded by other features with high values as well.\footnote{For the exact reference cf. the ArcGIS online help “How Hot Spot Analysis (Getis-Ord Gi*) works”: \url{http://resources.arcgis.com/en/help/main/10.2/index.html\#/How\_Hot\_Spot\_Analysis\_Getis\_Ord\_Gi\_works/005p00000011000000/} [accessed November 2014]}(ESRI 2014)
 \end{quote}
 
-As a result, for each location the analysis yields a z-score and a p-value, both of which are associated with standard normal distribution. Very high positive z-scores indicate a clustering of values which are higher than the mean value, thus building a hot spot \citep[65]{sibler_visualisierung_2011}. In the case of our data the VI for every survey location is compared with all other VIs within a distance of 17.4km, a value computed automatically to ensure that each location has at least one neighbor. If a location has a very high positive VI and the locations within the defined radius also have high VIs, it becomes part of a hot spot. In the opposite case (i.e. high negative values) we find a cold spot. \figref{fig:6} displays the results mapped to the SADS survey locations in order to identify the hot and cold spots geographically.]{As a result, for each location the analysis yields a z-score and a p-value, both of which are associated with standard normal distribution. Very high positive z-scores indicate a clustering of values which are higher than the mean value, thus building a hot spot \citep[65]{sibler_visualisierung_2011}. In the case of our data the \emph{VI} for every survey location is compared with all other \emph{VI}s within a distance of 17.4km, a value computed automatically to ensure that each location has at least one neighbor.\footnote{The requirement of having at least one neighbor to be included in the analysis is especially important for the locations in the periphery. On average, there are twelve neighbors included within the radius of 17.4km for each location.} If a location has a very high positive \emph{VI} and the locations within the defined radius also have high \emph{VI}s, it becomes part of a hot spot. In the opposite case (i.e. high negative values) we find a cold spot. \figref{fig:6} displays the results mapped to the SADS survey locations in order to identify the hot and cold spots geographically.
+As a result, for each location the analysis yields a z-score and a p-value, both of which are associated with standard normal distribution. Very high positive z-scores indicate a clustering of values which are higher than the mean value, thus building a hot spot \citep[65]{sibler_visualisierung_2011}. In the case of our data the VI for every survey location is compared with all other VIs within a distance of 17.4km, a value computed automatically to ensure that each location has at least one neighbor. If a location has a very high positive VI and the locations within the defined radius also have high VIs, it becomes part of a hot spot. In the opposite case (i.e. high negative values) we find a cold spot. \figref{fig:6} displays the results mapped to the SADS survey locations in order to identify the hot and cold spots geographically.
+%]{
+As a result, for each location the analysis yields a z-score and a p-value, both of which are associated with standard normal distribution. Very high positive z-scores indicate a clustering of values which are higher than the mean value, thus building a hot spot \citep[65]{sibler_visualisierung_2011}. In the case of our data the \emph{VI} for every survey location is compared with all other \emph{VI}s within a distance of 17.4km, a value computed automatically to ensure that each location has at least one neighbor.\footnote{The requirement of having at least one neighbor to be included in the analysis is especially important for the locations in the periphery. On average, there are twelve neighbors included within the radius of 17.4km for each location.} If a location has a very high positive \emph{VI} and the locations within the defined radius also have high \emph{VI}s, it becomes part of a hot spot. In the opposite case (i.e. high negative values) we find a cold spot. \figref{fig:6} displays the results mapped to the SADS survey locations in order to identify the hot and cold spots geographically.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{illustrations/stoeck_fig6}
@@ -200,4 +202,5 @@ Based on our findings, what conclusions can we draw regarding the dynamics of sy
 \section*{Acknowledgements}
 This paper is a revised and extended version of a talk I gave at the Methods in Dialectology XV conference in Groningen (NL), August 2014. I would like to thank Elvira Glaser, Péter Jeszenszky and Gabriela Bart for their helpful comments, as well as three anonymous referees. Moreover, I would like to thank Stephanie Schwenke for correcting my English. All shortcomings are my own responsibility.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -161,7 +161,7 @@ The next group of maps shows changes in progress. Here, the linguistic distribut
 In both cases, the FPJD data shows the transitional stage of dialectal changes between the LAJ/GAJ data and the CS data. If the changes have occurred in the local area recently, they will be captured by the FPJD maps.
 
 \begin{figure}
-\includegraphics[width=0.6\textwidth]{illustrations/fuku_fig7}
+\includegraphics[width=0.6\textwidth]{illustrations/fuku2_fig7}
 \caption{Changes of usage in {\textquotedbl}two days after tomorrow{\textquotedbl} and {\textquotedbl}three days after tomorrow{\textquotedbl}}
 \label{fig:7}
 \end{figure}
@@ -174,4 +174,5 @@ Regional language changes are traced back using data from three different geolin
 
 This paper is part of the outcomes of the collaborative research project “Field-Research Project for Analyzing the Formation Process of Japanese Dialects”, carried out at the National Institute for Japanese Language and Linguistics, and was supported by Grant-in-Aid for Scientific Research (A) 23242024 and (C) 25370487.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

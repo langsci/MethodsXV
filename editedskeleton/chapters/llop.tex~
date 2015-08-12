@@ -108,4 +108,5 @@ Developing further approaches as the one presented here we can revitalise and ma
 
 Concerning the future of our dialects, the presence of dialectal structures in standard language taught at school and in the media and creative literature can be, by far, the most influential agents for the reinforcement of dialect speakers’ awareness and self-confidence. Nevertheless, linguistic research may also play an important role in the acknowledgement and valuation of the richness of dialectal phenomena and unstudied structures such as the one presented here. In that sense, \citet[80]{rigau_variacio_1998} postulated that “the clearer we know the terms and limits of variation, the better the knowledge and use of our language will be.”  Following up, \citet[31]{trudgill_sociolinguistic_2002} stated that “linguists are in a particularly strong position to oppose this discrimination and consequent homogenization because they, as experts on language, have the knowledge and ability to engender positive attitudes and to counter the denigration”. The survey of a wider range of micro-syntactic phenomena in Catalan is a promising challenge to be followed up.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

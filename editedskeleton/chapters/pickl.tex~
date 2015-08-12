@@ -124,7 +124,7 @@ Figure~2 shows the first factor, i.e. the factor with the most explained varianc
 \begin{minipage}[t]{0.3\textwidth}MHG \textit{ou} in \textit{(ein)k}\textit{au}\textit{fen} (5.124)\end{minipage} & {\itshape ao} &  5.823385\\
  
  {\bfseries 5} & 
-\begin{minipage}[t]{0.3\textwidth}OHG Strong verbs, Class V (\textit{siehst}, 2\textsuperscript{nd} sg.) (6.58)\end{minipage} & \textit{s\=\iš} (\textit{h} not realised) &  5.800744\\
+\begin{minipage}[t]{0.3\textwidth}OHG Strong verbs, Class V (\textit{siehst}, 2\textsuperscript{nd} sg.) (6.58)\end{minipage} & \textit{s\={\i}š} (\textit{h} not realised) &  5.800744\\
  
  {\bfseries 6} & 
 \begin{minipage}[t]{0.3\textwidth}MHG \textit{ë} in \textit{B}\textit{e}\textit{sen} (4.57)\end{minipage} & {\itshape \={e}?} &  5.787916\\
@@ -393,4 +393,5 @@ Following this approach, dialect areas or types are constituted by sets of co-oc
 
 This work was supported by the \textit{Deutsche Forschungsgemeinschaft} (DFG), which funded the joint research project \textit{Neue Dialektometrie mit Methoden der stochastischen Bildanalyse} of the Department of German Linguistics (University of Augsburg) and the Institute of Stochastics (Ulm University). My cordial thanks go to all of my colleagues who have contributed to this work, as well as to the editors and reviewers of this volume.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

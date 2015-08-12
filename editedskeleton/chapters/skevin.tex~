@@ -465,4 +465,5 @@ Since the interviews and the analysis have shown that young adults in Betina con
 
 Naturally, with this change of approach we do not claim to have found all the reasons for dialect levelling. We just claim that this is another possible approach to understanding this phenomenon. On the contrary, in our corpora there are some lexical variants whose status in the lexis of the Betina dialect cannot be explained by means of any of the proposed approaches (i.e., the saliency factor, linguistic accommodation, or the loss of utilitarian objects and human praxis). For example, we could not find a valid answer to why the variant \textit{gvantijera, }which refers to such an ordinary and everyday object as a tray is almost lost to the knowledge and usage of the young adults (3 out of 7 speakers know its meaning, but none of them uses the word), whereas \textit{kajin }‘a round metal vessel used for washing clothes’\textit{, }a household object as well, but no longer in use, is very familiar to all the speakers, and all of them claim that they would use the word if they saw the object. This and many other questions on the future of dialects have yet to be answered and can be explained neither through the semiotic nor through the sociolinguistic approach.
 
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

@@ -1,15 +1,16 @@
+\newcommand{\ipa}[1]{\textipa{#1}}
+\newcommand{\ip}[1]{\ipa{[#1]}}
+\newcommand{\ips}[1]{\ipa{/#1/}}
+
 \documentclass[output=paper]{LSP/langsci}  
-\author{Christopher Carignan, Jeff Mielke, \& Robin Dodsworth} 
-\title{Tongue trajectories in {N}orth {A}merican {E}nglish {\ae} tensing} 
+\author{Christopher Carignan, Jeff Mielke, Robin Dodsworth} 
+\title{Tongue trajectories in {N}orth {A}merican {E}nglish {æ} tensing} 
 % \epigram{Change epigram in chapters/01.tex or remove it there }
-\abstract{Ultrasound imaging is of interest to many dialectologists, due to the relative transportability and low cost associated with this technique for imaging the tongue. The current study introduces a method for examining the temporal dynamics of articulatory correlates of sociolinguistic variables directly from ultrasound video. This technique is demonstrated with data from {N}orth {A}merican {E}nglish \ips{\ae}.
+\abstract{Ultrasound imaging is of interest to many dialectologists, due to the relative transportability and low cost associated with this technique for imaging the tongue. The current study introduces a method for examining the temporal dynamics of articulatory correlates of sociolinguistic variables directly from ultrasound video. This technique is demonstrated with data from {N}orth {A}merican {E}nglish \ips{æ}.
 }
 \maketitle 
 \begin{document}
 
-\newcommand{\ipa}[1]{\textipa{#1}}
-\newcommand{\ip}[1]{\ipa{[#1]}}
-\newcommand{\ips}[1]{\ipa{/#1/}}
  
 %TITLE WITH IPA SYMBOL:
 %\title{Tongue trajectories in {N}orth {A}merican {E}nglish \ips{\ae{}} tensing}
@@ -73,5 +74,5 @@ For most of the speakers, pre-\ips{m n} tensing is characterized by a peak align
 Figure \ref{NDG_tensing} shows \ips{\ae} before \ips{n d g} for three speakers. This is an important comparison because pre-\ips{n} tensing is widespread, pre-\ips{d} tensing is observed primarily in the Mid-Atlantic region, and pre-\ips{g} tensing is observed primarily in parts of the North and Canada.  All speakers in the sample manifest higher tongue position before \ips{g} than before \ips{d}, at least by the end of the vowel. This is consistent with \ips{g} being a velar consonant.  For some speakers, including the Philadelphia speaker who tenses more before \ips{d} in select lexical items, this is true \textit{only} at the very end of the vowel, and it appears to be a purely coarticulatory raising of the tongue body in anticipation for \ip{g}.  For the others, the tongue body raising starts earlier in the vowel, which we interpret as a pattern that is not solely due to anticipatory velar coarticulation.  This greater tongue height before \ips{g} compared to \ips{d} begins in the second half of the vowel for the mid-Atlantic and Buffalo speakers and all but one of the Southern speakers, and from the first half of the vowel for all of the other Northern speakers and one Southern speaker. \ips{\ae} before \ips{g} has higher tongue body throughout the entire vowel for all of the Ontario speakers.  The similarity in the rising trajectories before \ips{N} and \ips{g} (seen in Figures \ref{MNNG_tensing} and \ref{NDG_tensing}), indicates that \ips{N} patterns with the other velar \ips{g} rather than the other nasals \ips{m n}. Figure \ref{misc_tensing} shows two more expected patterns.  The speaker from Newfoundland shows very little tongue raising even before a nasal \citep{boberg_regional_2008}, and a speaker from Philadelphia shows tongue raising before anterior fricatives, with a trajectory similar to what is observed in other speakers only before \ips{m n}.
 
 The method we have described generates time-varying articulatory signals from ultrasound video at a high frame rate (60 fps for the system used in this study). This allows the observation and quantification of temporal changes and co-articulatory effects, from an articulatory imaging technique that is fairly accessible to linguists, with minimal manual data processing.  Unlike formant measurements, these articulatory signals are present in consonants and even silent intervals, and they do not require any kind of tracking.  Using this method, we have analyzed temporal characteristics of NAE \ips{\ae} tensing in different segmental contexts for speakers from different regions known to have different \ips{\ae} tensing patterns. At an articulatory level, most speakers' patterns of tongue height before \ips{m n} suggest a completely different vowel target in these contexts, much like the tense \ips{\ae} observed in a superset of these contexts in the Philadelphia split short-a system.  In speakers who have tongue raising before the velars \ips{g N}, a completely different trajectory is observed, in which tenseness increases throughout the vowel.  The observed regional variation in the timing of tongue raising before velars suggests that pre-velar \ips{\ae} tensing can be studied as coarticulation that has been phonologized to different degrees in different dialects.
-
-\bibliography{master}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

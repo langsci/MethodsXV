@@ -265,6 +265,6 @@ Current directions of research include testing the robustness of these results b
 \section*{Acknowledgements}
 The research reported in this article was carried out in  the framework  of  a  Short  Term  Mobility  program   of international   exchanges   funded   by   the National Council of Research (CNR, Italy). The authors thank the anonymous reviewers for their comments,  which  have  helped  to  improve  this  article.
 
-\bibliography{master}
 
-\section*{References}
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}
